@@ -1,0 +1,4 @@
+/Users/swc/Dropbox/UnderGit/cs1440s17-shared/GeoRegions/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/swc/Dropbox/UnderGit/cs1440s17-shared/GeoRegions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/swc/Dropbox/UnderGit/cs1440s17-shared/GeoRegions/cmake-build-debug/CMakeFiles/Test.dir
+/Users/swc/Dropbox/UnderGit/cs1440s17-shared/GeoRegions/cmake-build-debug/CMakeFiles/GeoRegions.dir
