@@ -445,7 +445,11 @@ void RegionTester::testGettersAndSetters()
 void RegionTester::testSubRegions()
 {
     std::cout << "RegionTester::testSubRegions" << std::endl;
+    std::string r1Data;
+    std::string r11Data;
+    std::string r12Data;
 
+    Region* r1 = new Region(r1Data);
     // TODO: Add test cases for managing sub-regions
 }
 

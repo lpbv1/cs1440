@@ -226,15 +226,16 @@ void Region::display(std::ostream& out, unsigned int displayLevel, bool showChil
 
 void Region::save(std::ostream& out)
 {
-    if (getType() == WorldType) {
+/*    if (getType() == WorldType) {
         out << getType()
             << "," << getName()
             << "," << getPopulation()
             << "," << getArea()
             << std::endl;
     }
-
-    // TODO: implement loop in save method to save each sub-region
+*/
+    // Done: implement loop in save method to save each sub-region
+    //^Calling done but havent tested
     for (int x = 0; x < m_subRegionsNext; x++){
         out << sub[x]->getType()
             << "," << sub[x]->getName()
@@ -246,9 +247,9 @@ void Region::save(std::ostream& out)
     }
     // foreach subregion,
     //      save that region
-    if (getType() == WorldType) {
+/*    if (getType() == WorldType) {
         out << regionDelimiter << std::endl;
-    }
+    } */
 }
 
 void Region::validate()
