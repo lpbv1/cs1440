@@ -91,9 +91,10 @@ void UserInterface::add()
         std::string data = getStringInput(
                 "Enter name,population,areas for " + Region::regionLabel(m_subRegionType) + ":");
         if (data != "") {
-            Region *region = Region::create(m_subRegionType, data);
+            Region* region = Region::create(m_subRegionType, data);
             if (region != nullptr) {
-                // TODO: Add region to the m_currentRegion
+                // Done: Add region to the m_currentRegion
+                m_currentRegion->addRegion(region);
                 std::cout << Region::regionLabel(m_subRegionType) << " added" << std::endl;
             } else {
                 std::cout << "Invalid data - no region created" << std::endl;
@@ -122,7 +123,8 @@ void UserInterface::edit()
         if (valid && id>0)
         {
             Region* region;
-            // TODO: Look the region by Id and assign it to region variable
+            // Done: Look the region by Id and assign it to region variable
+            region = m_currentRegion->getRegion(id);
             if (region!=nullptr)
             {
                 std::cout << "Editing: ";
@@ -216,7 +218,8 @@ void UserInterface::remove()
         unsigned int id = convertStringToUnsignedInt(input, &valid);
         if (valid && id>0)
         {
-            // TODO: Look up the region by Id and assign it to the region variable
+            // Done: Look up the region by Id and assign it to the region variable
+            m_currentRegion->removeRegion(id);
             std::cout << "Deleted!" << std::endl;
         }
         else
@@ -245,7 +248,8 @@ void UserInterface::changeToSubRegion()
         if (valid && id>0)
         {
             Region* region;
-            // TODO: Lookup the region by Id and assign it to the region variable.
+            // Done: Lookup the region by Id and assign it to the region variable.
+            region = m_currentRegion->getRegion(id);
             if (region!=nullptr)
             {
                 UserInterface* nextUI = nullptr;

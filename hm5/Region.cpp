@@ -11,6 +11,7 @@
 #include "City.h"
 
 #include <iomanip>
+#include <iostream>
 
 const std::string regionDelimiter = "^^^";
 const int TAB_SIZE = 4;
@@ -125,12 +126,17 @@ Region::Region(RegionType type, const std::string data[]) :
     m_population = convertStringToUnsignedInt(data[1], &m_isValid);
     if (m_isValid)
         m_area = convertStringToDouble(data[2], &m_isValid);
+    RegionType child;
 }
 
 Region::~Region()
 {
-    // TODO: cleanup any dynamically allocated objects
+    // Done: cleanup any dynamically allocated objects
+    for (int x = 0; x < m_subRegionsNext; x++){
+        delete sub[x];
+    }
 }
+
 
 std::string Region::getRegionLabel() const
 {
@@ -139,7 +145,39 @@ std::string Region::getRegionLabel() const
 
 unsigned int Region::computeTotalPopulation()
 {
-    // TODO: implement computeTotalPopulation, such that the result is m_population + the total population for all sub-regions
+    // Done: implement computeTotalPopulation, such that the result is m_population + the total population for all sub-regions
+    unsigned int total;
+    for(int x = 0; x < m_subRegionsNext;x++){
+        total += sub[x]->computeTotalPopulation() + m_population;
+    }
+
+    if(m_subRegionsNext == 0){
+        total = m_population;
+    }
+
+
+    return total;
+}
+
+void Region::removeRegion(int id){
+    for(int x = 0; x < m_subRegionsNext; x++){
+        if(sub[x]->m_id == id){
+            delete sub[x];
+            sub[x] = nullptr;
+            sub.erase(sub.begin() + x);
+            m_subRegionsNext--;
+        }
+    }
+}
+
+Region* Region::getRegion(int id) {
+    Region* temp = nullptr;
+    for(int x = 0; x < m_subRegionsNext; x++){
+        if(sub[x]->m_id == id){
+            temp = sub[x];
+        }
+    }
+    return temp;
 }
 
 void Region::list(std::ostream& out)
@@ -147,7 +185,10 @@ void Region::list(std::ostream& out)
     out << std::endl;
     out << getName() << ":" << std::endl;
 
-    // TODO: implement the loop in the list method
+    // Done: implement the loop in the list method
+    for(int x = 0; x < m_subRegionsNext; x++){
+        out << std::to_string(sub[x]->getId()) << " " << sub[x]->getName() << std::endl;
+    }
     // foreach subregion, print out
     //      id    name
 }
@@ -163,7 +204,7 @@ void Region::display(std::ostream& out, unsigned int displayLevel, bool showChil
     double area = getArea();
     double density = (double) totalPopulation / area;
 
-    // TODO: compute the totalPopulation using a method
+    // Done: compute the totalPopulation using a method
 
     out << std::setw(6) << getId() << "  "
         << getName() << ", population="
@@ -173,7 +214,11 @@ void Region::display(std::ostream& out, unsigned int displayLevel, bool showChil
 
     if (showChild)
     {
-        // TODO: implement loop in display method
+        // Done: implement loop in display method
+        for (int x = 0; x < m_subRegionsNext; x++){
+            //out << std::to_string(sub[x]->getId()) << " " << sub[x]->getName() << std::endl;
+            sub[x]->display(std::cout, displayLevel + 1, showChild);
+        }
         // foreach subregion
         //      display that subregion at displayLevel+1 with the same showChild value
     }
@@ -181,17 +226,29 @@ void Region::display(std::ostream& out, unsigned int displayLevel, bool showChil
 
 void Region::save(std::ostream& out)
 {
-    out << getType()
-        << "," << getName()
-        << "," << getPopulation()
-        << "," << getArea()
-        << std::endl;
+    if (getType() == WorldType) {
+        out << getType()
+            << "," << getName()
+            << "," << getPopulation()
+            << "," << getArea()
+            << std::endl;
+    }
 
     // TODO: implement loop in save method to save each sub-region
+    for (int x = 0; x < m_subRegionsNext; x++){
+        out << sub[x]->getType()
+            << "," << sub[x]->getName()
+            << "," << sub[x]->getPopulation()
+            << "," << sub[x]->getArea()
+            << std::endl;
+        sub[x]->save(out);
+        out << regionDelimiter << std::endl;
+    }
     // foreach subregion,
     //      save that region
-
-    out << regionDelimiter << std::endl;
+    if (getType() == WorldType) {
+        out << regionDelimiter << std::endl;
+    }
 }
 
 void Region::validate()
@@ -216,8 +273,12 @@ void Region::loadChildren(std::istream& in)
             Region* child = create(line);
             if (child!= nullptr)
             {
-                // TODO: Add the new sub-region to this region
+                // Done: Add the new sub-region to this region
+                sub.push_back(child);
+                m_subRegionsNext++;
                 child->loadChildren(in);
+
+
             }
         }
     }
