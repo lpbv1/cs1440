@@ -55,6 +55,7 @@ public:
     void addRegion(Region* toAdd){sub.push_back(toAdd); m_subRegionsNext++;}
     void removeRegion(int id);
     Region* getRegion(int id);
+    Region::RegionType getSubRegionType();
 
 
     // Done: Add method to compute total population, as m_population + the total population for all sub-regions
@@ -68,8 +69,9 @@ protected:
     virtual void validate();
     void loadChildren(std::istream& in);
     static unsigned int getNextId();
-    //V calling this one done with no methods. May add some if I need to but probably wont.
+
     // Done: add whatever other helper methods you might need
+    //^ calling this one done with no methods. May add some if I need to but probably wont.
 };
 
 

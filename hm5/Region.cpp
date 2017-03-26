@@ -146,17 +146,17 @@ std::string Region::getRegionLabel() const
 unsigned int Region::computeTotalPopulation()
 {
     // Done: implement computeTotalPopulation, such that the result is m_population + the total population for all sub-regions
-    unsigned int total;
+    unsigned int total = 0;
     for(int x = 0; x < m_subRegionsNext;x++){
-        total += sub[x]->computeTotalPopulation() + m_population;
+        total += sub[x]->computeTotalPopulation();
     }
 
     if(m_subRegionsNext == 0){
-        total = m_population;
+        return m_population;
     }
 
 
-    return total;
+    return total + m_population;
 }
 
 void Region::removeRegion(int id){
@@ -178,6 +178,14 @@ Region* Region::getRegion(int id) {
         }
     }
     return temp;
+}
+
+Region::RegionType Region::getSubRegionType() {
+    if(m_subRegionsNext > 0){
+        return sub[0]->m_regionType;
+    }else{
+        return UnknownRegionType;
+    }
 }
 
 void Region::list(std::ostream& out)
@@ -226,16 +234,17 @@ void Region::display(std::ostream& out, unsigned int displayLevel, bool showChil
 
 void Region::save(std::ostream& out)
 {
-/*    if (getType() == WorldType) {
+    if (getType() == WorldType) {
         out << getType()
             << "," << getName()
             << "," << getPopulation()
             << "," << getArea()
             << std::endl;
     }
-*/
+
     // Done: implement loop in save method to save each sub-region
     //^Calling done but havent tested
+    //Tested. Works.
     for (int x = 0; x < m_subRegionsNext; x++){
         out << sub[x]->getType()
             << "," << sub[x]->getName()
@@ -247,9 +256,9 @@ void Region::save(std::ostream& out)
     }
     // foreach subregion,
     //      save that region
-/*    if (getType() == WorldType) {
+    if (getType() == WorldType) {
         out << regionDelimiter << std::endl;
-    } */
+    }
 }
 
 void Region::validate()
