@@ -85,7 +85,7 @@ void UserInterface::run()
 
 void UserInterface::add()
 {
-    m_subRegionType = getSubRegionType();
+    m_subRegionType = m_currentRegion->getSubRegionType();
 
     if (m_subRegionType!=Region::RegionType::UnknownRegionType) {
         std::string data = getStringInput(

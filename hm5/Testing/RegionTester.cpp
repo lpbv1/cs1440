@@ -56,10 +56,10 @@ void RegionTester::testCreateFromStream()
             std::cout << "\tExpected 4 nations, but loaded a " << world->getSubRegionCount() << std::endl;
             return;
         }
-
-        for (unsigned int nationIndex=0; nationIndex < world->getSubRegionCount(); nationIndex++)
+        //I changed this loop. It wasnt set up for how the id management works.
+        for (unsigned int nationIndex=2; nationIndex < world->getSubRegionCount() + 1; nationIndex++)
         {
-            Region* nation = world->getSubRegionByIndex(nationIndex);
+            Region* nation = world->getRegion(nationIndex);
             if (nation->getType()!=Region::RegionType::NationType)
             {
                 std::cout << "Failed to create correct type of sub-region in the world from " << inputFile << std::endl;
@@ -445,17 +445,46 @@ void RegionTester::testGettersAndSetters()
 void RegionTester::testSubRegions()
 {
     std::cout << "RegionTester::testSubRegions" << std::endl;
-    std::string r1Data;
-    std::string r11Data;
-    std::string r12Data;
+    const std::string r1Data = "Mars,0,10000000";
+    const std::string r11Data = "NorthPole,0,10000";
+    const std::string r12Data = "SouthPole,2,10000";
+    const std::string r111Data = "Base,1,10000";
 
-    Region* r1 = new Region(r1Data);
-    // TODO: Add test cases for managing sub-regions
+    Region* r1 = Region::create(Region::WorldType, r1Data);
+    Region* r11 = Region::create(Region::NationType, r11Data);
+    Region* r12 = Region::create(Region::NationType, r12Data);
+    Region* r111 = Region::create(Region::StateType, r111Data);
+    r1->addRegion(r11);
+    r1->addRegion(r12);
+    r11->addRegion(r111);
+    if(r1->getSubRegionCount() != 2 || r11->getSubRegionCount() != 1){
+        std::cout << "Adding regions failed" << std::endl;
+    }
+
+    if(r1->getSubRegionType() != Region::RegionType::NationType){
+        std::cout << "Get region type failed" << std::endl;
+    }
+
+    r1->removeRegion(17);
+    if(r1->getSubRegionCount() != 1){
+        std::cout <<"Removing region failed"<<std::endl;
+    }
+
+    // Done: Add test cases for managing sub-regions
 }
 
 void RegionTester::testComputeTotalPopulation()
 {
     std::cout << "RegionTester::testComputeTotalPopulation" << std::endl;
 
-    // TODO: Add test cases for computeTotalPopulation
+    std::string inputFile = "SampleData/sampleData-4.txt";
+    std::ifstream inputStream(inputFile);
+    Region* popTest = Region::create(inputStream);
+    int test = popTest->computeTotalPopulation();
+    if(test != 4059243){
+        std::cout << "Population calculation failed" << std::endl;
+        std::cout << "Got " << test << ". expected " << "4059243" << std::endl;
+    }
+
+    // Done: Add test cases for computeTotalPopulation
 }
