@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp)
 
-set(TEST_FILES testing/TestingMain.cpp)
+set(TEST_FILES testing/TestingMain.cpp Dictionary.cpp Dictionary.h KeyValue.cpp KeyValue.h)
 
 add_executable(hm6 ${SOURCE_FILES})
 
