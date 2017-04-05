@@ -1,6 +1,3 @@
-//
-// Created by telepatheticman on 4/4/2017.
-//
 
 #ifndef HM6_DICTIONARY_H
 #define HM6_DICTIONARY_H
@@ -13,7 +10,7 @@ template <typename T, typename S>
 class Dictionary {
 private:
     int m_Size;
-    KeyValue* keyValue;
+    KeyValue<T, S>* keyValue;
     int m_idTally;
     void resize();
     void update();

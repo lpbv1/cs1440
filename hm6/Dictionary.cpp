@@ -1,6 +1,4 @@
-//
-// Created by telepatheticman on 4/4/2017.
-//
+
 
 #include "Dictionary.h"
 
@@ -66,7 +64,6 @@ void Dictionary::add(T newKey, S newValue){
 }
 
 void Dictionary::removeById(int id) {
-    try {
         if (id >= m_idTally || id < 0) {
             throw "No such id";
         }
@@ -83,29 +80,36 @@ void Dictionary::removeById(int id) {
         temp = nullptr;
         m_idTally--;
         update();
-    }catch (std::string e){
-        std::cout << e << std::endl;
-    }
 }
 
 template <typename T, typename S>
 void Dictionary::removeByKey(T Key){
-
+    KeyValue temp;
+    try {
+        temp = getByKey(Key);
+    }catch(std::string ex){
+        throw ex;
+    }
+    try {
+        removeById(temp.getId());
+    }catch(std::string ex){
+        throw ex;
+    }
 }
 
 template <typename T, typename S>
 KeyValue Dictionary::getByKey(T key){
-    for(int x = 0; x < m_idTally; x++){
-        if (keyValue[x].getKey() == key){
-            return keyValue[x];
+        for (int x = 0; x < m_idTally; x++) {
+            if (keyValue[x].getKey() == key) {
+                return keyValue[x];
+            }
         }
-    }
-    throw "No such key exists";
+        throw "No such key exists";
 }
 
 KeyValue Dictionary::getById(int id) {
-    if(id < m_idTally) {
-        return keyValue[id];
-    }
-    throw "No such keyValue exists";
+        if (id < m_idTally) {
+            return keyValue[id];
+        }
+        throw "No such keyValue exists";
 }

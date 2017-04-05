@@ -1,6 +1,4 @@
-//
-// Created by telepatheticman on 4/4/2017.
-//
+
 
 #ifndef HM6_KEYVALUE_H
 #define HM6_KEYVALUE_H
@@ -18,10 +16,9 @@ public:
     T getKey(){return m_Key;};
     S getValue(){return m_Value;};
     int getId(){return m_Id;};
-    void setKey(T newKey){m_Key = newKey;};
-    void setValue(S newValue){m_Value = newValue;};
-    void setId(int newId){m_Id = newId;};
-protected:
+    void setKey(T newKey) const{m_Key = newKey;};
+    void setValue(S newValue) const{m_Value = newValue;};
+    void setId(int newId) const {const m_Id = newId;};
 
 };
 
