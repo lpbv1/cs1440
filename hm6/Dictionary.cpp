@@ -1,8 +1,8 @@
 
 
 #include "Dictionary.h"
-
-Dictionary::Dictionary() {
+template<typename T, typename S>
+Dictionary::Dictionary<T, S>() {
     m_idTally = 0;
     m_Size = 10;
     keyValue = new KeyValue[m_Size];
@@ -19,7 +19,7 @@ Dictionary::~Dictionary(){
     delete[]keyValue;
 }
 
-Dictionary::Dictionary (const Dictionary &obj){
+Dictionary::Dictionary(Dictionary &obj){
 
 }
 
@@ -49,17 +49,27 @@ KeyValue& Dictionary::operator[](int id) const {
 }
 template <typename T, typename S>
 void Dictionary::add(T newKey, S newValue){
-    if(m_idTally < m_Size){
-        keyValue[m_idTally].setKey(newKey);
-        keyValue[m_idTally].setValue(newValue);
-        keyValue[m_idTally].setId(m_idTally);
-        m_idTally++;
+    std::string check = "";
+    try {
+        KeyValue temp = getByKey(newKey);
+    }catch(std::string ex){
+        check = ex;
+    }
+    if(check == "No such key exists") {
+        if (m_idTally < m_Size) {
+            keyValue[m_idTally].setKey(newKey);
+            keyValue[m_idTally].setValue(newValue);
+            keyValue[m_idTally].setId(m_idTally);
+            m_idTally++;
+        } else {
+            resize();
+            keyValue[m_idTally].setKey(newKey);
+            keyValue[m_idTally].setValue(newValue);
+            keyValue[m_idTally].setId(m_idTally);
+            m_idTally++;
+        }
     }else{
-        resize();
-        keyValue[m_idTally].setKey(newKey);
-        keyValue[m_idTally].setValue(newValue);
-        keyValue[m_idTally].setId(m_idTally);
-        m_idTally++;
+        throw "Duplicate key";
     }
 }
 
@@ -111,5 +121,5 @@ KeyValue Dictionary::getById(int id) {
         if (id < m_idTally) {
             return keyValue[id];
         }
-        throw "No such keyValue exists";
+        throw "id out of range";
 }

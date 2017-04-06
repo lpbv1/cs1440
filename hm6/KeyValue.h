@@ -12,15 +12,64 @@ private:
 public:
     KeyValue();
     KeyValue(T Key, S Value, int Id);
-    KeyValue(const KeyValue &obj);
-    T getKey(){return m_Key;};
-    S getValue(){return m_Value;};
-    int getId(){return m_Id;};
-    void setKey(T newKey) const{m_Key = newKey;};
-    void setValue(S newValue) const{m_Value = newValue;};
-    void setId(int newId) const {const m_Id = newId;};
+    KeyValue(KeyValue &obj);
+    T getKey();
+    S getValue();
+    int getId();
+    void setKey(T newKey);
+    void setValue(S newValue);
+    void setId(int newId);
 
 };
+
+template <typename T, typename S>
+KeyValue<T, S>::KeyValue() {
+
+}
+
+template <typename T, typename S>
+KeyValue<T, S>::KeyValue(T Key, S Value, int Id) {
+    m_Key = Key;
+    m_Value = Value;
+    m_Id = Id;
+}
+
+template <typename T, typename S>
+KeyValue<T, S>::KeyValue(KeyValue &obj) {
+    obj.setKey(this->m_Key);
+    obj.setValue(this->m_Value);
+    obj.setId(this->m_Id);
+}
+
+template <typename T, typename S>
+T KeyValue<T, S>::getKey(){
+    return m_Key;
+}
+
+template <typename T, typename S>
+S KeyValue<T, S>::getValue(){
+    return m_Value;
+}
+
+template <typename T, typename S>
+int KeyValue<T, S>::getId(){
+    return m_Id;
+}
+
+template <typename T, typename S>
+void KeyValue<T, S>::setKey(T newKey){
+    m_Key = newKey;
+}
+
+template <typename T, typename S>
+void KeyValue<T, S>::setValue(S newValue){
+    m_Value = newValue;
+}
+
+template <typename T, typename S>
+void KeyValue<T, S>::setId(int newId){
+    m_Id = newId;
+}
 
 
 #endif //HM6_KEYVALUE_H

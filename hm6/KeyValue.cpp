@@ -6,7 +6,7 @@ KeyValue::KeyValue() {
 }
 
 template <typename T, typename S>
-KeyValue::KeyValue(T Key, S Value, int Id) {
+KeyValue<T, S>::KeyValue(T Key, S Value, int Id) {
     m_Key = Key;
     m_Value = Value;
     m_Id = Id;
