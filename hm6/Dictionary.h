@@ -22,7 +22,7 @@ public:
     void add(T newKey, S newValue);
     void removeById(int id);
     void removeByKey(T Key);
-    KeyValue<T, S> getById(int id);
+    KeyValue<T, S>& getById(int id);
     KeyValue<T, S>& operator[](int id) const;
     KeyValue<T, S>& getByKey(T key);
     int getCount(){return m_idTally;};
@@ -50,7 +50,13 @@ Dictionary<T, S>::~Dictionary(){
 
 template<typename T, typename S>
 Dictionary<T, S>::Dictionary(Dictionary &obj){
+    obj.keyValue = new KeyValue<T, S>[m_Size];
+    obj.m_Size = this->m_Size;
+    for (int x = 0; x < m_Size - 1; x++){
+        obj.keyValue[x] = this->keyValue[x];
+    }
 
+    obj.update();
 }
 
 template<typename T, typename S>
@@ -83,13 +89,13 @@ KeyValue<T, S>& Dictionary<T, S>::operator[](int id) const {
 }
 template <typename T, typename S>
 void Dictionary<T, S>::add(T newKey, S newValue){
-/*    std::string check = "";
+    std::string check = "";
     try {
         KeyValue<T, S> temp = getByKey(newKey);
     }catch(std::string ex){
         check = ex;
-    }*/
-//    if(check == "No such key exists") {
+    }
+    if(check == "No such key exists") {
         if (m_idTally < m_Size) {
             keyValue[m_idTally].setKey(newKey);
             keyValue[m_idTally].setValue(newValue);
@@ -102,10 +108,10 @@ void Dictionary<T, S>::add(T newKey, S newValue){
             keyValue[m_idTally].setId(m_idTally);
             m_idTally++;
         }
-    /*}else{
+    }else{
         std::string ex = "Duplicate key";
         throw ex;
-    }*/
+    }
 }
 
 template<typename T, typename S>
@@ -156,7 +162,7 @@ KeyValue<T, S>& Dictionary<T, S>::getByKey(T key){
 }
 
 template<typename T, typename S>
-KeyValue<T, S> Dictionary<T, S>::getById(int id) {
+KeyValue<T, S>& Dictionary<T, S>::getById(int id) {
     if (id < m_idTally) {
         return keyValue[id];
     }
