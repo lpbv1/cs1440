@@ -8,8 +8,6 @@
 class DictionaryTest {
 public:
     void constructorTest();
-    void operatorTest();
-    void countTest();
 };
 
 

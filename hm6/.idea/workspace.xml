@@ -13,17 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="510a5ed4-6dcf-47fb-8107-684fb6f7f1fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing/DictionaryTest.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing/DictionaryTest.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing/KeyValueTest.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testing/KeyValueTest.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/hm6.iml" afterPath="$PROJECT_DIR$/.idea/hm6.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/KeyValue.cpp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dictionary.h" afterPath="$PROJECT_DIR$/Dictionary.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KeyValue.h" afterPath="$PROJECT_DIR$/KeyValue.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing/TestingMain.cpp" afterPath="$PROJECT_DIR$/testing/TestingMain.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing/DictionaryTest.cpp" afterPath="$PROJECT_DIR$/testing/DictionaryTest.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing/DictionaryTest.h" afterPath="$PROJECT_DIR$/testing/DictionaryTest.h" />
     </list>
     <ignored path="hm6.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,8 +62,8 @@
       <file leaf-file-name="DictionaryTest.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="28" column="86" selection-start-line="28" selection-start-column="86" selection-end-line="28" selection-end-column="86" />
+            <state relative-caret-position="208">
+              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -78,8 +72,8 @@
       <file leaf-file-name="DictionaryTest.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="162">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding>
                 <element signature="e#60#86#0" expanded="true" />
               </folding>
@@ -179,10 +173,10 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/KeyValue.h" />
         <option value="$PROJECT_DIR$/testing/KeyValueTest.cpp" />
-        <option value="$PROJECT_DIR$/testing/DictionaryTest.h" />
         <option value="$PROJECT_DIR$/testing/TestingMain.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Dictionary.h" />
+        <option value="$PROJECT_DIR$/testing/DictionaryTest.h" />
         <option value="$PROJECT_DIR$/testing/DictionaryTest.cpp" />
       </list>
     </option>
@@ -415,7 +409,7 @@
       <updated>1491261957809</updated>
       <workItem from="1491261961318" duration="423000" />
       <workItem from="1491416613917" duration="7442000" />
-      <workItem from="1491443274311" duration="13440000" />
+      <workItem from="1491443274311" duration="13747000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1491262121737</created>
@@ -459,11 +453,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491452555019</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Most if not all problems fixed">
+      <created>1491457995088</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1491457995089</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21305000" />
+    <option name="totallyTimeSpent" value="21612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
@@ -475,7 +476,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -506,7 +507,8 @@
     <MESSAGE value="finished just about all base code" />
     <MESSAGE value="encountering problems" />
     <MESSAGE value="encountering problems (errors in this one)" />
-    <option name="LAST_COMMIT_MESSAGE" value="encountering problems (errors in this one)" />
+    <MESSAGE value="Most if not all problems fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Most if not all problems fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -554,11 +556,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#34#58#0" expanded="false" />
-            <element signature="e#903#927#0" expanded="false" />
-            <element signature="e#2422#2446#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -587,9 +585,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding>
-            <element signature="e#60#84#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -629,28 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KeyValue.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#60#84#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dictionary.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-409">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="e#34#58#0" expanded="false" />
-            <element signature="e#903#927#0" expanded="false" />
-            <element signature="e#2422#2446#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KeyValue.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -683,16 +657,6 @@
           <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#60#86#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -736,6 +700,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dictionary.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testing/TestingMain.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -746,10 +718,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/KeyValue.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#60#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="28" column="86" selection-start-line="28" selection-start-column="86" selection-end-line="28" selection-end-column="86" />
+        <state relative-caret-position="208">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
           <folding />
         </state>
       </provider>

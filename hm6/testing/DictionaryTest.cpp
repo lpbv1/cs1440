@@ -32,4 +32,10 @@ void DictionaryTest::constructorTest() {
     }catch(std::string ex){
         std::cout << ex << ": test0 pt4 passed" << std::endl;
     }
+
+    try{
+        test0->removeById(8);
+    }catch(std::string ex){
+        std::cout << "test0 pt5 failed" << std::endl;
+    }
 }
