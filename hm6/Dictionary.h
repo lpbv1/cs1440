@@ -9,105 +9,98 @@
 template <typename T, typename S>
 class Dictionary {
 private:
-    int m_Size;
-    KeyValue<T, S>* keyValue;
-    int m_idTally;
+    int m_size;
+    KeyValue<T, S>** keyValues;
+    int m_nextId = 0;
+    int m_count = 0;
     void resize();
-    void update();
 public:
     Dictionary();
     Dictionary(int size);
     ~Dictionary();
-    Dictionary(Dictionary &obj);
+    Dictionary(const Dictionary &original);
+    bool Found(T newKey);
     void add(T newKey, S newValue);
-    void removeById(int id);
-    void removeByKey(T Key);
-    KeyValue<T, S>& getById(int id);
-    KeyValue<T, S>& operator[](int id) const;
-    KeyValue<T, S>& getByKey(T key);
-    int getCount(){return m_idTally;};
+    int find(const T& key);
+    void removeByIndex(int index);
+    void removeByKey(const T& Key);
+    const KeyValue<T, S>& getByIndex(int index) const;
+    const KeyValue<T, S>& operator[](int index) const;
+    const KeyValue<T, S>& getByKey(const T& key);
+    int getCount(){return m_nextId;};
 };
 
 template<typename T, typename S>
 Dictionary<T, S>::Dictionary() {
-    m_idTally = 0;
-    m_Size = 10;
-    keyValue = new KeyValue<T, S>[m_Size];
+    m_size = 10;
+    keyValues = new KeyValue<T, S>*[m_size];
 }
 
 template<typename T, typename S>
 Dictionary<T, S>::Dictionary(int size){
-    m_idTally = 0;
-    m_Size = size;
-    keyValue = new KeyValue<T, S>[m_Size];
+    m_size = size;
+    keyValues = new KeyValue<T, S>*[m_size];
 }
 
 template<typename T, typename S>
 Dictionary<T, S>::~Dictionary(){
-    keyValue = nullptr;
-    delete[]keyValue;
+    for (int x = 0; x < m_count; x++){
+        delete keyValues[x];
+    }
+    delete[]keyValues;
+    keyValues = nullptr;
 }
 
 template<typename T, typename S>
-Dictionary<T, S>::Dictionary(Dictionary &obj){
-    obj.keyValue = new KeyValue<T, S>[m_Size];
-    obj.m_Size = this->m_Size;
-    for (int x = 0; x < m_Size - 1; x++){
-        obj.keyValue[x] = this->keyValue[x];
+Dictionary<T, S>::Dictionary(const Dictionary& original){
+    keyValues = new KeyValue<T, S>*[original.m_size];
+    m_size = original.m_size;
+    for (int x = 0; x < m_size - 1; x++){
+        keyValues[x] = original.keyValues[x];
     }
 
-    obj.update();
 }
 
 template<typename T, typename S>
 void Dictionary<T, S>::resize() {
-    m_Size++;
-    KeyValue<T, S>* temp = new KeyValue<T, S>[m_Size];
-    for (int x = 0; x < m_Size - 1; x++){
-        temp[x] = keyValue[x];
-    }
-    delete[]keyValue;
-    keyValue = temp;
-    temp = nullptr;
-}
-
-template<typename T, typename S>
-void Dictionary<T, S>::update() {
-    for (int x = 0; x < m_idTally; x++){
-        keyValue[x].setId(x);
-    }
-}
-
-template<typename T, typename S>
-KeyValue<T, S>& Dictionary<T, S>::operator[](int id) const {
-    if(id < m_idTally) {
-        return keyValue[id];
+    if(m_count == m_size){
+        m_size++;
     }else{
-        std::string ex = "id out of range";
-        throw ex;
+        m_size+=m_count + 1;
     }
+    KeyValue<T, S>** temp = new KeyValue<T, S>*[m_size];
+    for (int x = 0; x < m_count; x++){
+        temp[x] = keyValues[x];
+    }
+    delete[]keyValues;
+    keyValues = temp;
 }
+
+
+template<typename T, typename S>
+const KeyValue<T, S>& Dictionary<T, S>::operator[](int index) const {
+    return getByIndex(index);
+}
+
+template <typename T, typename S>
+bool Dictionary<T, S>::Found(T newKey) {
+    bool isFound = false;
+    try {
+        const KeyValue<T, S> &temp = getByKey(newKey);
+        isFound = true;
+    } catch (std::string ex) {
+
+    }
+    return isFound;
+}
+
 template <typename T, typename S>
 void Dictionary<T, S>::add(T newKey, S newValue){
-    std::string check = "";
-    try {
-        KeyValue<T, S> temp = getByKey(newKey);
-    }catch(std::string ex){
-        check = ex;
-    }
-    if(check == "No such key exists") {
-        if (m_idTally < m_Size) {
-            keyValue[m_idTally].setKey(newKey);
-            keyValue[m_idTally].setValue(newValue);
-            keyValue[m_idTally].setId(m_idTally);
-            m_idTally++;
-        } else {
+    if(!Found(newKey)) {
+        if (m_count >= m_size) {
             resize();
-            keyValue[m_idTally].setKey(newKey);
-            keyValue[m_idTally].setValue(newValue);
-            keyValue[m_idTally].setId(m_idTally);
-            m_idTally++;
         }
+        keyValues[m_count++] = new KeyValue<T, S>(newKey, newValue, m_nextId++);
     }else{
         std::string ex = "Duplicate key";
         throw ex;
@@ -115,58 +108,47 @@ void Dictionary<T, S>::add(T newKey, S newValue){
 }
 
 template<typename T, typename S>
-void Dictionary<T, S>::removeById(int id) {
-    if (id >= m_idTally || id < 0) {
-        std::string ex = "No such id";
+void Dictionary<T, S>::removeByIndex(int index) {
+    if (index >= m_count || index < 0) {
+        std::string ex = "Index out of range";
         throw ex;
     }
-    KeyValue<T, S>* temp = new KeyValue<T, S>[m_Size - 1];
-    for (int x = 0; x < m_Size - 1; x++) {
-        if (x < id) {
-            temp[x] = keyValue[x];
-        } else if (x >= id) {
-            temp[x] = keyValue[x + 1];
-        }
+    delete keyValues[index];
+    for (int x = index; x < m_count - 1; x++) {
+         keyValues[x] = keyValues[x + 1];
     }
-    delete[]keyValue;
-    keyValue = temp;
-    temp = nullptr;
-    m_idTally--;
-    update();
+    m_count--;
 }
 
 template <typename T, typename S>
-void Dictionary<T, S>::removeByKey(T Key){
-    KeyValue<T, S> temp;
-    try {
-        temp = getByKey(Key);
-    }catch(std::string ex){
-        throw ex;
-    }
-    try {
-        removeById(temp.getId());
-    }catch(std::string ex){
-        throw ex;
-    }
+void Dictionary<T, S>::removeByKey(const T& key){
+    int index = find(key);
+    removeByIndex(index);
 }
 
 template <typename T, typename S>
-KeyValue<T, S>& Dictionary<T, S>::getByKey(T key){
-    for (int x = 0; x < m_idTally; x++) {
-        if (keyValue[x].getKey() == key) {
-            return keyValue[x];
+int Dictionary<T, S>::find(const T& key){
+    for (int x = 0; x < m_count; x++) {
+        if (keyValues[x]->getKey() == key) {
+            return x;
         }
     }
     std::string ex = "No such key exists";
     throw ex;
 }
 
+template <typename T, typename S>
+const KeyValue<T, S>& Dictionary<T, S>::getByKey(const T& key){
+    int index = find(key);
+    return getByIndex(index);
+}
+
 template<typename T, typename S>
-KeyValue<T, S>& Dictionary<T, S>::getById(int id) {
-    if (id < m_idTally) {
-        return keyValue[id];
+const KeyValue<T, S>& Dictionary<T, S>::getByIndex(int index) const {
+    if (index >= 0 && index < m_count) {
+        return *keyValues[index];
     }
-    std::string ex = "id out of range";
+    std::string ex = "Index out of range";
     throw ex;
 }
 

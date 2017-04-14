@@ -34,7 +34,7 @@ void DictionaryTest::constructorTest() {
     }
 
     try{
-        test0->removeById(8);
+        test0->removeByIndex(8);
     }catch(std::string ex){
         std::cout << "test0 pt5 failed" << std::endl;
     }

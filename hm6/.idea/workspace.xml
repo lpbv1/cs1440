@@ -13,11 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="510a5ed4-6dcf-47fb-8107-684fb6f7f1fa" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/KeyValue.cpp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dictionary.h" afterPath="$PROJECT_DIR$/Dictionary.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KeyValue.h" afterPath="$PROJECT_DIR$/KeyValue.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing/DictionaryTest.cpp" afterPath="$PROJECT_DIR$/testing/DictionaryTest.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testing/DictionaryTest.h" afterPath="$PROJECT_DIR$/testing/DictionaryTest.h" />
     </list>
     <ignored path="hm6.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,30 +62,8 @@
       <file leaf-file-name="DictionaryTest.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DictionaryTest.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding>
-                <element signature="e#60#86#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeyValueTest.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testing/KeyValueTest.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            <state relative-caret-position="172">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -106,8 +84,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state relative-caret-position="360">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -118,21 +96,22 @@
       <file leaf-file-name="Dictionary.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dictionary.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+            <state relative-caret-position="-252">
+              <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
               <folding>
                 <element signature="e#52#73#0" expanded="true" />
-                <element signature="e#647#671#0" expanded="true" />
-                <element signature="e#795#819#0" expanded="true" />
-                <element signature="e#952#976#0" expanded="true" />
-                <element signature="e#1067#1091#0" expanded="true" />
-                <element signature="e#1340#1364#0" expanded="true" />
-                <element signature="e#1621#1645#0" expanded="true" />
-                <element signature="e#1768#1792#0" expanded="true" />
-                <element signature="e#1998#2022#0" expanded="true" />
-                <element signature="e#2774#2798#0" expanded="true" />
-                <element signature="e#3586#3610#0" expanded="true" />
-                <element signature="e#3863#3887#0" expanded="true" />
+                <element signature="e#771#795#0" expanded="true" />
+                <element signature="e#902#926#0" expanded="true" />
+                <element signature="e#1042#1066#0" expanded="true" />
+                <element signature="e#1233#1257#0" expanded="true" />
+                <element signature="e#1506#1530#0" expanded="true" />
+                <element signature="e#1847#1871#0" expanded="true" />
+                <element signature="e#1984#2008#0" expanded="true" />
+                <element signature="e#2235#2259#0" expanded="true" />
+                <element signature="e#2569#2593#0" expanded="true" />
+                <element signature="e#3048#3072#0" expanded="true" />
+                <element signature="e#3307#3331#0" expanded="true" />
+                <element signature="e#3464#3488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,18 +120,17 @@
       <file leaf-file-name="KeyValue.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KeyValue.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
-                <element signature="e#392#416#0" expanded="true" />
-                <element signature="e#459#483#0" expanded="true" />
-                <element signature="e#600#624#0" expanded="true" />
-                <element signature="e#750#774#0" expanded="true" />
-                <element signature="e#833#857#0" expanded="true" />
-                <element signature="e#920#944#0" expanded="true" />
-                <element signature="e#1003#1027#0" expanded="true" />
-                <element signature="e#1100#1124#0" expanded="true" />
-                <element signature="e#1205#1229#0" expanded="true" />
+                <element signature="e#423#447#0" expanded="true" />
+                <element signature="e#490#514#0" expanded="true" />
+                <element signature="e#645#669#0" expanded="true" />
+                <element signature="e#741#765#0" expanded="true" />
+                <element signature="e#841#865#0" expanded="true" />
+                <element signature="e#930#954#0" expanded="true" />
+                <element signature="e#1034#1058#0" expanded="true" />
+                <element signature="e#1146#1170#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,13 +149,13 @@
         <option value="$PROJECT_DIR$/KeyValue.cpp" />
         <option value="$PROJECT_DIR$/testing/KeyValueTest.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/KeyValue.h" />
         <option value="$PROJECT_DIR$/testing/KeyValueTest.cpp" />
         <option value="$PROJECT_DIR$/testing/TestingMain.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/Dictionary.h" />
         <option value="$PROJECT_DIR$/testing/DictionaryTest.h" />
         <option value="$PROJECT_DIR$/testing/DictionaryTest.cpp" />
+        <option value="$PROJECT_DIR$/KeyValue.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Dictionary.h" />
       </list>
     </option>
   </component>
@@ -221,9 +199,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hm3" />
   </component>
-  <component name="RunManager" selected="Application.hm6_test">
+  <component name="RunManager" selected="Application.hm6">
     <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hm6" TARGET_NAME="hm6" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
@@ -265,6 +243,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -409,7 +393,8 @@
       <updated>1491261957809</updated>
       <workItem from="1491261961318" duration="423000" />
       <workItem from="1491416613917" duration="7442000" />
-      <workItem from="1491443274311" duration="13747000" />
+      <workItem from="1491443274311" duration="15405000" />
+      <workItem from="1491947664044" duration="7215000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1491262121737</created>
@@ -460,11 +445,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491457995089</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Most if not all problems fixed">
+      <created>1491458291277</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491458291277</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21612000" />
+    <option name="totallyTimeSpent" value="30485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
@@ -476,7 +468,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -537,6 +529,91 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/TestingMain.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/KeyValueTest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#55#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dictionary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#52#73#0" expanded="true" />
+            <element signature="e#771#795#0" expanded="true" />
+            <element signature="e#902#926#0" expanded="true" />
+            <element signature="e#1042#1066#0" expanded="true" />
+            <element signature="e#1233#1257#0" expanded="true" />
+            <element signature="e#1506#1530#0" expanded="true" />
+            <element signature="e#1847#1871#0" expanded="true" />
+            <element signature="e#1984#2008#0" expanded="true" />
+            <element signature="e#2235#2259#0" expanded="true" />
+            <element signature="e#2569#2593#0" expanded="true" />
+            <element signature="e#3048#3072#0" expanded="true" />
+            <element signature="e#3307#3331#0" expanded="true" />
+            <element signature="e#3464#3488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KeyValue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#423#447#0" expanded="true" />
+            <element signature="e#490#514#0" expanded="true" />
+            <element signature="e#645#669#0" expanded="true" />
+            <element signature="e#741#765#0" expanded="true" />
+            <element signature="e#841#865#0" expanded="true" />
+            <element signature="e#930#954#0" expanded="true" />
+            <element signature="e#1034#1058#0" expanded="true" />
+            <element signature="e#1146#1170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
           <folding />
         </state>
@@ -552,57 +629,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dictionary.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dictionary.cpp" />
     <entry file="file://$PROJECT_DIR$/Dictionary.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding>
             <element signature="e#52#73#0" expanded="true" />
-            <element signature="e#647#671#0" expanded="true" />
-            <element signature="e#795#819#0" expanded="true" />
-            <element signature="e#952#976#0" expanded="true" />
-            <element signature="e#1067#1091#0" expanded="true" />
-            <element signature="e#1340#1364#0" expanded="true" />
-            <element signature="e#1621#1645#0" expanded="true" />
-            <element signature="e#1768#1792#0" expanded="true" />
-            <element signature="e#1998#2022#0" expanded="true" />
-            <element signature="e#2774#2798#0" expanded="true" />
-            <element signature="e#3586#3610#0" expanded="true" />
-            <element signature="e#3863#3887#0" expanded="true" />
+            <element signature="e#771#795#0" expanded="true" />
+            <element signature="e#902#926#0" expanded="true" />
+            <element signature="e#1042#1066#0" expanded="true" />
+            <element signature="e#1233#1257#0" expanded="true" />
+            <element signature="e#1506#1530#0" expanded="true" />
+            <element signature="e#1847#1871#0" expanded="true" />
+            <element signature="e#1984#2008#0" expanded="true" />
+            <element signature="e#2235#2259#0" expanded="true" />
+            <element signature="e#2569#2593#0" expanded="true" />
+            <element signature="e#3048#3072#0" expanded="true" />
+            <element signature="e#3307#3331#0" expanded="true" />
+            <element signature="e#3464#3488#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KeyValue.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/KeyValue.cpp" />
     <entry file="file://$PROJECT_DIR$/KeyValue.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
-            <element signature="e#392#416#0" expanded="true" />
-            <element signature="e#459#483#0" expanded="true" />
-            <element signature="e#600#624#0" expanded="true" />
-            <element signature="e#750#774#0" expanded="true" />
-            <element signature="e#833#857#0" expanded="true" />
-            <element signature="e#920#944#0" expanded="true" />
-            <element signature="e#1003#1027#0" expanded="true" />
-            <element signature="e#1100#1124#0" expanded="true" />
-            <element signature="e#1205#1229#0" expanded="true" />
+            <element signature="e#423#447#0" expanded="true" />
+            <element signature="e#490#514#0" expanded="true" />
+            <element signature="e#645#669#0" expanded="true" />
+            <element signature="e#741#765#0" expanded="true" />
+            <element signature="e#841#865#0" expanded="true" />
+            <element signature="e#930#954#0" expanded="true" />
+            <element signature="e#1034#1058#0" expanded="true" />
+            <element signature="e#1146#1170#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -621,24 +684,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KeyValue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="e#392#416#0" expanded="true" />
-            <element signature="e#459#483#0" expanded="true" />
-            <element signature="e#600#624#0" expanded="true" />
-            <element signature="e#750#774#0" expanded="true" />
-            <element signature="e#833#857#0" expanded="true" />
-            <element signature="e#920#944#0" expanded="true" />
-            <element signature="e#1003#1027#0" expanded="true" />
-            <element signature="e#1100#1124#0" expanded="true" />
-            <element signature="e#1205#1229#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -651,77 +696,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Dictionary.cpp" />
+    <entry file="file://$PROJECT_DIR$/KeyValue.cpp" />
     <entry file="file://$PROJECT_DIR$/testing/KeyValueTest.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing/KeyValueTest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#55#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dictionary.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
-          <folding>
-            <element signature="e#52#73#0" expanded="true" />
-            <element signature="e#647#671#0" expanded="true" />
-            <element signature="e#795#819#0" expanded="true" />
-            <element signature="e#952#976#0" expanded="true" />
-            <element signature="e#1067#1091#0" expanded="true" />
-            <element signature="e#1340#1364#0" expanded="true" />
-            <element signature="e#1621#1645#0" expanded="true" />
-            <element signature="e#1768#1792#0" expanded="true" />
-            <element signature="e#1998#2022#0" expanded="true" />
-            <element signature="e#2774#2798#0" expanded="true" />
-            <element signature="e#3586#3610#0" expanded="true" />
-            <element signature="e#3863#3887#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dictionary.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing/TestingMain.cpp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KeyValue.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -736,10 +716,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testing/TestingMain.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KeyValue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#423#447#0" expanded="true" />
+            <element signature="e#490#514#0" expanded="true" />
+            <element signature="e#645#669#0" expanded="true" />
+            <element signature="e#741#765#0" expanded="true" />
+            <element signature="e#841#865#0" expanded="true" />
+            <element signature="e#930#954#0" expanded="true" />
+            <element signature="e#1034#1058#0" expanded="true" />
+            <element signature="e#1146#1170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/KeyValueTest.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#55#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dictionary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
+          <folding>
+            <element signature="e#52#73#0" expanded="true" />
+            <element signature="e#771#795#0" expanded="true" />
+            <element signature="e#902#926#0" expanded="true" />
+            <element signature="e#1042#1066#0" expanded="true" />
+            <element signature="e#1233#1257#0" expanded="true" />
+            <element signature="e#1506#1530#0" expanded="true" />
+            <element signature="e#1847#1871#0" expanded="true" />
+            <element signature="e#1984#2008#0" expanded="true" />
+            <element signature="e#2235#2259#0" expanded="true" />
+            <element signature="e#2569#2593#0" expanded="true" />
+            <element signature="e#3048#3072#0" expanded="true" />
+            <element signature="e#3307#3331#0" expanded="true" />
+            <element signature="e#3464#3488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testing/DictionaryTest.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        <state relative-caret-position="172">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding />
         </state>
       </provider>

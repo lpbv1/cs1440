@@ -15,7 +15,10 @@ int main(){
         std::cout << ex << std::endl;
     }
 
-    std::cout << test0->getById(4).getValue() << std::endl;
+    std::cout << test0->getByIndex(4).getValue() << std::endl;
+    std::cout << test0->getByIndex(4).getId() << std::endl;
+    std::cout << test0->getByIndex(0).getValue() << std::endl;
+    std::cout << test0->getByIndex(0).getId() << std::endl;
     /*I do not have the time nor the prerequisite code to enable me to illustrate the capabilities, but
     I would still like to explain what I would have done as a demonstration. Fisrt, a rot13 encoder/decoder
      by setting the keys to the rotated values (n, o, p, q, r, s, ect) and the values as the alphabet (a, b, c, d, ect.).
