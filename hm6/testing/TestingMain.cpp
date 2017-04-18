@@ -7,6 +7,8 @@ int main(){
     KeyValueTest* testKey = new KeyValueTest();
     testKey->testConstructors();
     testDiction->constructorTest();
+    testDiction->functionTest();
+    testDiction->exceptionTest();
 
     return 0;
 }

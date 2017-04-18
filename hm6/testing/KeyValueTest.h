@@ -3,6 +3,7 @@
 #define HM6_KEYVALUETEST_H
 #include "../KeyValue.h"
 #include "iostream"
+#include "Person.h"
 
 class KeyValueTest {
 public:

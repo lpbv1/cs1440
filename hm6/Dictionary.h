@@ -18,16 +18,17 @@ public:
     Dictionary();
     Dictionary(int size);
     ~Dictionary();
-    Dictionary(const Dictionary &original);
+    Dictionary(const Dictionary& original);
     bool Found(T newKey);
     void add(T newKey, S newValue);
     int find(const T& key);
     void removeByIndex(int index);
     void removeByKey(const T& Key);
     const KeyValue<T, S>& getByIndex(int index) const;
-    const KeyValue<T, S>& operator[](int index) const;
+    const KeyValue<T, S>& operator[](int index);
     const KeyValue<T, S>& getByKey(const T& key);
-    int getCount(){return m_nextId;};
+    int getCount(){return m_count;};
+    int getSize(){return m_size;};
 };
 
 template<typename T, typename S>
@@ -78,7 +79,7 @@ void Dictionary<T, S>::resize() {
 
 
 template<typename T, typename S>
-const KeyValue<T, S>& Dictionary<T, S>::operator[](int index) const {
+const KeyValue<T, S>& Dictionary<T, S>::operator[](int index) {
     return getByIndex(index);
 }
 
